@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--This is a configuration file for the integration of a tools into Galaxy (https://galaxyproject.org/).-->
+<!--Proposed Tool Section: [PhenoMeNal]-->
+<tool id="metfrag" name="metfrag" version="0.1">
+  <requirements>
+        <container type="docker">phnmnl/metfrag-cli</container>
+  </requirements>
+  <description>MetFrag.</description>
+  <command><![CDATA[
+    echo "PeakListPath = $infile" >> /tmp/Training.cfg;
+	echo "MetFragDatabaseType = $MetFragDatabaseType" >> /tmp/Training.cfg;
+	echo "IonizedPrecursorMass = $IonizedPrecursorMass" >> /tmp/Training.cfg;
+	echo "DatabaseSearchRelativeMassDeviation = $DatabaseSearchRelativeMassDeviation" >> /tmp/Training.cfg;
+	echo "FragmentPeakMatchAbsoluteMassDeviation = $FragmentPeakMatchAbsoluteMassDeviation" >> /tmp/Training.cfg;
+	echo "FragmentPeakMatchRelativeMassDeviation = $FragmentPeakMatchRelativeMassDeviation" >> /tmp/Training.cfg;
+	echo "PrecursorIonMode = $PrecursorIonMode" >> /tmp/Training.cfg;
+	echo "IsPositiveIonMode = $IsPositiveIonMode" >> /tmp/Training.cfg;
+	echo "MetFragScoreTypes = $MetFragScoreTypes" >> /tmp/Training.cfg;
+	echo "MetFragScoreWeights = $MetFragScoreWeights" >> /tmp/Training.cfg;
+	echo "MetFragCandidateWriter = $MetFragCandidateWriter" >> /tmp/Training.cfg;
+	echo "ProcessCandidates = $ProcessCandidates" >> /tmp/Training.cfg;
+	echo "SampleName = $SampleName" >> /tmp/Training.cfg;
+	echo "ResultsPath = $ResultsPath" >> /tmp/Training.cfg;
+	echo "MaximumTreeDepth = $MaximumTreeDepth" >> /tmp/Training.cfg;
+	echo "MetFragPreProcessingCandidateFilter = $MetFragPreProcessingCandidateFilter" >> /tmp/Training.cfg;
+	java -jar /usr/local/bin/MetFrag2.2-CL.jar /tmp/Training.cfg;
+	cat /tmp/Training.txt > $outfile;
+  ]]>
+  </command>
+  <inputs>
+    <param name="infile" type="text" format="txt" optional="False" label="Input file with peak list in txt format." />
+    <param name="MetFragDatabaseType" type="select" value="PubChem" optional="True" label="" help="">
+      <option value="PubChem" selected="True">PubChem</option>
+    </param>
+    <param name="IonizedPrecursorMass" type="select" value="345.0874" optional="True" label="" help="">
+      <option value="345.0874" selected="True">345.0874</option>
+    </param>
+    <param name="DatabaseSearchRelativeMassDeviation" type="select" value="5" optional="True" label="" help="">
+      <option value="5" selected="True">5</option>
+    </param>
+    <param name="FragmentPeakMatchAbsoluteMassDeviation" type="select" value="0.001" optional="True" label="" help="">
+      <option value="0.001" selected="True">0.001</option>
+    </param>
+    <param name="FragmentPeakMatchRelativeMassDeviation" type="select" value="5" optional="True" label="" help="">
+      <option value="5" selected="True">5</option>
+    </param>
+    <param name="PrecursorIonMode" type="select" value="-1" optional="True" label="" help="">
+      <option value="-1" selected="True">-1</option>
+    </param>
+    <param name="IsPositiveIonMode" type="select" value="FALSE" optional="True" label="" help="">
+      <option value="FALSE" selected="True">FALSE</option>
+    </param>
+    <param name="MetFragScoreTypes" type="select" value="FragmenterScore" optional="True" label="" help="">
+      <option value="FragmenterScore" selected="True">FragmenterScore</option>
+    </param>
+    <param name="MetFragScoreWeights" type="select" value="1.0" optional="True" label="" help="">
+      <option value="1.0" selected="True">1.0</option>
+    </param>
+    <param name="MetFragCandidateWriter" type="select" value="CSV" optional="True" label="" help="">
+      <option value="CSV" selected="True">CSV</option>
+    </param>
+    <param name="ProcessCandidates" type="select" value="false" optional="True" label="" help="">
+      <option value="false" selected="True">false</option>
+    </param>
+    <param name="SampleName" type="select" value="Training" optional="True" label="" help="">
+      <option value="Training" selected="True">Training</option>
+    </param>
+    <param name="ResultsPath" type="select" value="/tmp" optional="True" label="" help="">
+      <option value="/tmp" selected="True">/tmp</option>
+    </param>
+    <param name="MaximumTreeDepth" type="select" value="1" optional="True" label="" help="">
+      <option value="1" selected="True">1</option>
+    </param>
+    <param name="MetFragPreProcessingCandidateFilter" type="select" value="UnconnectedCompoundFilter" optional="True" label="" help="">
+      <option value="UnconnectedCompoundFilter" selected="True">UnconnectedCompoundFilter</option>
+    </param>
+  </inputs>
+  <outputs>
+    <data name="outfile" type="text" format="csv" label="csv outfile file" />
+  </outputs>
+  <help>MetFrag: In silico fragmentation for computer assisted identification of metabolite mass spectra.</help>
+</tool>
