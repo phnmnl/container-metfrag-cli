@@ -2,7 +2,7 @@
 ![Logo](metfrag_logo.png)
 
 # MetFrag-CLI
-Version: 1.0.0
+Version: 0.2
 
 ## Short Description
 
