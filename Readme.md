@@ -32,7 +32,7 @@ MetFrag is a freely available software for the annotation of high precision tand
 
 ## Tool Authors
 
-- Christoph Ruttkies, IPB-Halle
+- Christoph Ruttkies (IPB-Halle)
 
 ## Container Contributors
 
