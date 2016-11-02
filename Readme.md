@@ -1,5 +1,5 @@
 
-![Logo](rNMR_logo.gif)
+![Logo](metfrag_logo.png)
 
 # MetFrag-CLI
 Version: 1.0.0
