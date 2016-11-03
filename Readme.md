@@ -18,8 +18,8 @@ MetFrag is a freely available software for the annotation of high precision tand
 
 ## Functionality
 
-- Annotation / MS-MS / MS2
-- Fragments
+- Annotation / MS
+- Annotation / Fragments
 
 ## Approaches
 
@@ -28,7 +28,6 @@ MetFrag is a freely available software for the annotation of high precision tand
 ## Instrument Data Types
 
 - LC/MS
-- MS-MS / MS2
 
 ## Tool Authors
 
@@ -41,7 +40,6 @@ MetFrag is a freely available software for the annotation of high precision tand
 ## Website
 
 - https://c-ruttkies.github.io/MetFrag/
-
 
 ## Git Repository
 
