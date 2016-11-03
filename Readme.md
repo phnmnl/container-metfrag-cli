@@ -23,11 +23,11 @@ MetFrag is a freely available software for the annotation of high precision tand
 
 ## Approaches
 
-- Metabolomics / Targeted
+- Metabolomics
   
 ## Instrument Data Types
 
-- LC/MS
+- LC-MS/MS
 
 ## Tool Authors
 
@@ -43,7 +43,7 @@ MetFrag is a freely available software for the annotation of high precision tand
 
 ## Git Repository
 
-- https://github.com/c-ruttkies
+- https://github.com/c-ruttkies/MetFragRelaunched
 
 ## Installation 
 
