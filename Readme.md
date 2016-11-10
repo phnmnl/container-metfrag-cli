@@ -58,7 +58,7 @@ docker pull docker-registry.phenomenal-h2020.eu/phnmnl/metfrag-cli
 For direct docker usage:
 
 ```bash
-docker run --volume=$PWD:/mnt:rw -i -t docker-registry.phenomenal-h2020.eu/phnmnl/metfrag-cli PeakListPath=/mnt/Training-048.txt MetFragDatabaseType=PubChem IonizedPrecursorMass=345.0874 DatabaseSearchRelativeMassDeviation=5 FragmentPeakMatchAbsoluteMassDeviation=0.001 FragmentPeakMatchRelativeMassDeviation=5 PrecursorIonMode=-1 IsPositiveIonMode=FALSE MetFragScoreTypes=FragmenterScore MetFragScoreWeights=1.0 MetFragCandidateWriter=CSV SampleName=Training-048 ResultsPath=/mnt MaximumTreeDepth=1 MetFragPreProcessingCandidateFilter=UnconnectedCompoundFilter 
+docker run --volume=$PWD:/mnt:rw -i -t docker-registry.phenomenal-h2020.eu/phnmnl/metfrag-cli java -jar /usr/local/bin/MetFragCLI.jar PeakListPath=/mnt/Training-048.txt MetFragDatabaseType=PubChem IonizedPrecursorMass=345.0874 DatabaseSearchRelativeMassDeviation=5 FragmentPeakMatchAbsoluteMassDeviation=0.001 FragmentPeakMatchRelativeMassDeviation=5 PrecursorIonMode=-1 IsPositiveIonMode=FALSE MetFragScoreTypes=FragmenterScore MetFragScoreWeights=1.0 MetFragCandidateWriter=CSV SampleName=Training-048 ResultsPath=/mnt MaximumTreeDepth=1 MetFragPreProcessingCandidateFilter=UnconnectedCompoundFilter 
 ```
 
 ## Publications
