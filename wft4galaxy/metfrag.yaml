@@ -1,0 +1,12 @@
+workflows:
+  # workflow test metfrag
+  metfragcli:
+    file: "metfrag.ga"
+    inputs:
+      input: "metfrag.input"
+    expected:
+      output: "metfrag.output"
+    params:
+      2:
+        PrecursorIonMode: "-1"
+        IsPositiveIonMode: "FALSE"

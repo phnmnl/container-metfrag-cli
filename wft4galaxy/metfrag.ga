@@ -1,0 +1,78 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "MetFrag MS/MS", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "content_id": null, 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "input"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 200, 
+                "top": 200
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"input\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "ed36825b-e607-4fbd-86e3-97975650b7d7", 
+            "workflow_outputs": []
+        }, 
+        "1": {
+            "annotation": "", 
+            "content_id": "metfragcli", 
+            "id": 1, 
+            "input_connections": {
+                "infile": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool metfragcli", 
+                    "name": "infile"
+                }
+            ], 
+            "label": null, 
+            "name": "metfragcli", 
+            "outputs": [
+                {
+                    "name": "outfile", 
+                    "type": "csv"
+                }
+            ], 
+            "position": {
+                "left": 311.50001525878906, 
+                "top": 341.99998474121094
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "metfragcli", 
+            "tool_state": "{\"PrecursorIonMode\": \"\\\"-1\\\"\", \"__page__\": 0, \"MetFragScoreWeights\": \"\\\"1.0\\\"\", \"IonizedPrecursorMass\": \"\\\"345.0874\\\"\", \"MaximumTreeDepth\": \"\\\"1\\\"\", \"FragmentPeakMatchAbsoluteMassDeviation\": \"\\\"0.001\\\"\", \"DatabaseSearchRelativeMassDeviation\": \"\\\"5\\\"\", \"MetFragDatabaseType\": \"\\\"PubChem\\\"\", \"FragmentPeakMatchRelativeMassDeviation\": \"\\\"5\\\"\", \"__rerun_remap_job_id__\": null, \"IsPositiveIonMode\": \"\\\"FALSE\\\"\", \"infile\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\"}", 
+            "tool_version": "0.2", 
+            "type": "tool", 
+            "uuid": "90f981c1-3727-4c6d-a3c8-4ad8e73a382a", 
+            "workflow_outputs": [
+                {
+                    "label": "output", 
+                    "output_name": "outfile", 
+                    "uuid": "20be7e2f-59dc-4a14-a927-a78107067156"
+                }
+            ]
+        }
+    }, 
+    "uuid": "241e3031-cce6-4442-a5f0-4cfe43b0a429"
+}
