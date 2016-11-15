@@ -19,7 +19,6 @@ MetFrag is a freely available software for the annotation of high precision tand
 ## Functionality
 
 - Annotation / MS
-- Annotation / Fragments
 
 ## Approaches
 
