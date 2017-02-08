@@ -1,7 +1,8 @@
 FROM ubuntu:xenial
 
-LABEL software.version="2.4"
-LABEL version="0.2"
+LABEL software.version=2.4
+LABEL version=0.2
+LABEL software=metfrag-cli
 
 MAINTAINER PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )
 
