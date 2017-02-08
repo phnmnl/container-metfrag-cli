@@ -1,5 +1,8 @@
 FROM ubuntu:xenial
 
+LABEL software.version="2.4"
+LABEL version="0.1"
+
 MAINTAINER PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )
 
 LABEL Description="MetFrag command line interface."
