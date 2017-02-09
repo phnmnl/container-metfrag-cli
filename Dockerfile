@@ -1,16 +1,15 @@
-FROM ubuntu:xenial
-
 LABEL software.version=2.4
 LABEL version=0.2
 LABEL software=metfrag-cli
+LABEL Description="MetFrag command line interface."
 
 MAINTAINER PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )
 
-LABEL Description="MetFrag command line interface."
+FROM ubuntu:16.04
 
 # Update & upgrade sources
 RUN apt-get -y update
-RUN apt-get -y dist-upgrade
+#RUN apt-get -y dist-upgrade
 
 # Install development files needed
 RUN apt-get -y install git wget default-jre-headless
