@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 LABEL software.version=2.4.2
-LABEL version=0.2
+LABEL version=0.3
 LABEL software=metfrag-cli
 
 LABEL Description="MetFrag command line interface."
